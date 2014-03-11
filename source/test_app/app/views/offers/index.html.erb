@@ -1,0 +1,20 @@
+<h1>Listing offers</h1>
+
+<table width="80%" height="100%" cellpadding="1" cellspacing="1" style="margin:auto;">
+  <tbody>
+    <tr>
+      <td width="200px"><a href="/crawl" style="padding: 5px 10px;border: 1px solid #666666;background: #EEEEEE;font-weight: bold;">Crawl!</a></td>
+      <td><%= @offers.count %> Offers</td>
+    <tr>
+    <% @offers.each do |offer| %>
+      <tr>
+        <td></td>
+        <td style="border:1px solid #666666">
+          <span style="font-size:12px; font-weight:bold;"><%= offer.title %></span><br>
+          <p><%= offer.description %></p>
+          <a href="<%= offer.url %>" style="font-weight:bold;float: right;margin-right: 10px;padding: 4px 10px;background: #EEEEEE;bordeR: 1px solid #444444;">Get Deal</a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
